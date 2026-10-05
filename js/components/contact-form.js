@@ -54,12 +54,34 @@
               }).join('') +
             '</div>' +
           '</fieldset>' +
+          consentHTML() +
         '</div>' +
         '<div class="form-foot">' +
           '<button class="btn" type="submit">신청하기</button>' +
-          '<p class="form-note">입력하신 정보는 상담 안내 목적으로만 사용됩니다.</p>' +
         '</div>' +
       '</form>'
+    );
+  }
+
+  // 개인정보 수집·이용 동의 (필수)
+  function consentHTML() {
+    return (
+      '<div class="field full consent">' +
+        '<p class="consent-title" id="cf-privacy-title">개인정보 수집·이용 안내</p>' +
+        '<div class="consent-box" tabindex="0" role="region" aria-labelledby="cf-privacy-title">' +
+          '<table>' +
+            '<tr><th scope="row">수집 항목</th><td>이름, 나이, 사는 곳, 전화번호, 코칭 주제, 가능 시간대, 유입 경로, 신청 사유(프로보노 신청 시)</td></tr>' +
+            '<tr><th scope="row">이용 목적</th><td>상담 신청 확인, 프로그램 및 일정 안내, 프로보노 코칭 대상자 선정</td></tr>' +
+            '<tr><th scope="row">보유 기간</th><td>상담 완료 후 6개월 보관 후 파기 (동의 철회 시 즉시 파기)</td></tr>' +
+          '</table>' +
+          '<p>개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의하지 않을 경우 상담 신청이 제한됩니다.</p>' +
+        '</div>' +
+        '<label class="consent-check" for="cf-privacy">' +
+          '<input type="checkbox" id="cf-privacy" name="privacy">' +
+          '<span>위 내용을 확인했으며, 개인정보 수집·이용에 동의합니다.<span class="req" aria-hidden="true">*</span></span>' +
+        '</label>' +
+        '<span class="err" id="cf-privacy-err"></span>' +
+      '</div>'
     );
   }
 
@@ -99,7 +121,8 @@
       phone: !v('phone') ? '전화번호를 입력해주세요.' : (/^[0-9\-\s]{9,14}$/.test(v('phone')) ? '' : '올바른 전화번호를 입력해주세요.'),
       topic: v('topic') ? '' : '코칭 주제를 선택해주세요.',
       time: v('time') ? '' : '가능 시간대를 입력해주세요.',
-      reason: mode === 'probono' && !v('reason') ? '신청 사유를 입력해주세요.' : ''
+      reason: mode === 'probono' && !v('reason') ? '신청 사유를 입력해주세요.' : '',
+      privacy: form.elements.privacy.checked ? '' : '개인정보 수집·이용에 동의해주세요.'
     };
     var first = null;
     Object.keys(errors).forEach(function (k) {
@@ -123,6 +146,8 @@
       source: Array.prototype.map.call(form.querySelectorAll('[name="source"]:checked'), function (c) { return c.value; })
     };
     if (mode === 'probono') data.reason = get('reason');
+    data.privacyAgreed = true;
+    data.privacyAgreedAt = new Date().toISOString();
     return data;
   }
 
@@ -136,6 +161,9 @@
     // 입력하면 해당 필드 오류 해제
     form.addEventListener('input', function (e) {
       if (e.target.name) setError(form, e.target.name, '');
+    });
+    form.elements.privacy.addEventListener('change', function () {
+      if (this.checked) setError(form, 'privacy', '');
     });
 
     form.addEventListener('submit', function (e) {

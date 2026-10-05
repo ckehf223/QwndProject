@@ -37,14 +37,13 @@
       : '';
   }
 
-  var cta = p.status === '모집중'
-    ? '<div class="post-cta"><p>이 프로그램에 참여하고 싶으신가요?</p><button class="btn" type="button" data-contact' + (p.category === '프로보노' ? '="probono"' : '') + '>신청 · 문의하기</button></div>'
-    : '';
+  var cta =
+    '<div class="post-cta"><p>OWND의 프로그램이 궁금하신가요?</p><button class="btn" type="button" data-contact' +
+    (p.category === '프로보노' ? '="probono"' : '') + '>' + (p.category === '프로보노' ? '프로보노 코칭 신청' : '상담 문의하기') + '</button></div>';
 
   root.innerHTML =
     '<nav class="crumb" aria-label="현재 위치"><a href="archive.html">아카이브</a><span>›</span><a href="archive.html?cat=' + encodeURIComponent(p.category) + '">' + A.esc(p.category) + '</a></nav>' +
     '<header class="post-head">' +
-      A.badge(p.status) +
       '<h1>' + A.esc(A.title(p)) + '</h1>' +
       '<div class="meta"><span>' + A.esc(p.category) + '</span><span>' + p.date + '</span><span>OWND</span></div>' +
     '</header>' +

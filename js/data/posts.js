@@ -6,7 +6,6 @@ OWND.posts = [
   {
     id: 10,
     category: '세미나',
-    status: '모집중',
     title: '나를 알아가는 첫 질문: 성향으로 읽는 나',
     date: '2026.10.02',
     theme: 'navy',
@@ -22,7 +21,6 @@ OWND.posts = [
   {
     id: 9,
     category: '프로보노',
-    status: '모집중',
     title: '2026 하반기 청년 프로보노 코칭 참여자 모집',
     date: '2026.09.24',
     theme: 'sand',
@@ -38,7 +36,6 @@ OWND.posts = [
   {
     id: 8,
     category: '코치 양성',
-    status: '모집중',
     title: 'OWND 코치 아카데미 1기 모집 안내',
     date: '2026.09.15',
     theme: 'deep',
@@ -54,7 +51,6 @@ OWND.posts = [
   {
     id: 7,
     category: '워크숍',
-    status: '종료',
     title: '관계의 온도: 성향으로 이해하는 커뮤니케이션 워크숍',
     date: '2026.08.28',
     theme: 'star',
@@ -70,7 +66,6 @@ OWND.posts = [
   {
     id: 6,
     category: '원데이클래스',
-    status: '종료',
     title: '나다움 저널링: 하루 한 줄로 나를 기록하는 법',
     date: '2026.08.09',
     theme: 'mist',
@@ -85,7 +80,6 @@ OWND.posts = [
   {
     id: 5,
     category: '기관 연계',
-    status: '종료',
     title: '대학 진로센터 연계 ‘DIRECTION’ 그룹 코칭',
     date: '2026.07.18',
     theme: 'navy',
@@ -101,7 +95,6 @@ OWND.posts = [
   {
     id: 4,
     category: '세미나',
-    status: '종료',
     title: '번아웃, 잠시 멈추는 연습 — 청년 마음 돌봄 세미나',
     date: '2026.06.21',
     theme: 'deep',
@@ -116,7 +109,6 @@ OWND.posts = [
   {
     id: 3,
     category: '워크숍',
-    status: '종료',
     title: '팀으로 일하는 법: 강점 기반 팀 빌딩 워크숍',
     date: '2026.05.30',
     theme: 'star',
@@ -131,7 +123,6 @@ OWND.posts = [
   {
     id: 2,
     category: '소식',
-    status: '공지',
     title: 'OWND WISDOM 고전 코칭 심화과정 오픈',
     date: '2026.05.02',
     theme: 'sand',
@@ -146,7 +137,6 @@ OWND.posts = [
   {
     id: 1,
     category: '소식',
-    status: '공지',
     title: 'OWND 상담코칭센터를 소개합니다',
     date: '2026.04.01',
     theme: 'mist',

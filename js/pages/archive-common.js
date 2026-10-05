@@ -18,11 +18,6 @@ OWND.archive = (function () {
     });
   }
 
-  function badge(status) {
-    var cls = status === '모집중' ? 'open' : status === '종료' ? 'closed' : 'notice';
-    return '<span class="badge ' + cls + '">' + esc(status) + '</span>';
-  }
-
   // post.image가 있으면 이미지, 없으면 브랜드 톤 썸네일
   function thumb(post) {
     return (
@@ -35,8 +30,8 @@ OWND.archive = (function () {
   }
 
   function title(post) {
-    return '[' + post.category + (post.status === '공지' ? '' : '|' + post.status) + '] ' + post.title;
+    return '[' + post.category + '] ' + post.title;
   }
 
-  return { esc: esc, badge: badge, thumb: thumb, title: title };
+  return { esc: esc, thumb: thumb, title: title };
 })();

@@ -14,19 +14,51 @@
 </head>
 <body>
 
-<site-header active="archive"></site-header>
+<!-- 공통 헤더: 수정 시 모든 페이지(index, coaching, archive, post, partner)에 동일하게 반영 -->
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="index.html" class="logo" aria-label="OWND 메인으로">ownd</a>
+    <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
+        <a href="index.html">메인</a>
+        <a href="coaching.html">개인코칭</a>
+        <a href="archive.html" aria-current="page">아카이브</a>
+        <a href="partner.html">파트너</a>
+    </nav>
+    <div class="bar-actions">
+      <button class="btn" type="button" data-contact>상담 문의</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+        <svg class="open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
 <main class="post">
   <article class="wrap" id="post"></article>
 </main>
 
-<site-footer></site-footer>
+<!-- 공통 푸터: 수정 시 모든 페이지에 동일하게 반영 / TODO: 실제 사업자 정보·SNS 링크로 교체 -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><a class="logo" href="index.html" aria-label="OWND 메인으로">ownd</a><span class="slg">나다움을 소유하다.</span></div>
+      <div class="sns"><a href="#">인스타그램</a><a href="#">블로그</a><a href="#">카카오 채널</a></div>
+    </div>
+    <div class="bottom">
+      <p class="info">
+        <span>OWND 상담코칭센터</span><span>대표 [입력]</span><span>사업자등록번호 [입력]</span><br>
+        <span>주소 [입력]</span><span>연락처 [입력]</span><span>이메일 [입력]</span>
+      </p>
+      <p class="copy">&copy; 2026 OWND. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
 <script src="js/data/programs.js"></script>
 <script src="js/components/modal.js"></script>
 <script src="js/components/contact-form.js"></script>
-<script src="js/components/site-header.js"></script>
-<script src="js/components/site-footer.js"></script>
+<script src="js/components/site-menu.js"></script>
 <script src="js/data/posts.js"></script>
 <script src="js/pages/archive-common.js"></script>
 <script src="js/pages/post.js"></script>

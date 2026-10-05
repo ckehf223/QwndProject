@@ -19,15 +19,6 @@
   .row .more{justify-self:start;margin-top:6px}
 }
 
-/* notice */
-.notice-sec{padding:0 0 110px}
-.notice-box{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--star);border-radius:10px;padding:30px 32px}
-.notice-box h2{font-size:22px;margin-bottom:12px}
-.notice-box ul{padding-left:20px}
-.notice-box li+li{margin-top:8px}
-.notice-box li::marker{color:var(--star)}
-@media(max-width:480px){.notice-box{padding:24px 20px}}
-
 /* probono */
 .probono{background:var(--sand);padding:84px 0}
 .probono .wrap{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
@@ -37,7 +28,7 @@
 .pm-q{font-family:var(--kr-serif);font-size:18px;color:var(--deep);margin-bottom:18px}
 .pm-sessions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .pm-sess{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-.pm-sess h3{font-size:15px;color:var(--navy);margin-bottom:8px}
+.pm-sess h3{font-size:15px;margin-bottom:8px}
 .pm-sess ul{padding-left:18px;font-size:14.5px;line-height:1.7}
 .pm-sess li+li{margin-top:6px}
 .pm-sess li::marker{color:var(--star)}

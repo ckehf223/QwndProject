@@ -9,14 +9,12 @@
     });
   }
 
+  var STAR = '<svg viewBox="-12 -12 24 24" aria-hidden="true"><path d="M0-11Q1.6-1.6 11 0Q1.6 1.6 0 11Q-1.6 1.6-11 0Q-1.6-1.6 0-11Z" fill="currentColor"/></svg>';
+
   root.innerHTML = OWND.partners.map(function (p) {
-    var photo = p.photo
-      ? '<img src="' + esc(p.photo) + '" alt="' + esc(p.name) + ' 코치" loading="lazy">'
-      : '<span class="initial" aria-hidden="true">' + esc(p.name.slice(1)) + '</span>' +
-        '<svg viewBox="-12 -12 24 24" aria-hidden="true"><path d="M0-11Q1.6-1.6 11 0Q1.6 1.6 0 11Q-1.6 1.6-11 0Q-1.6-1.6 0-11Z" fill="currentColor"/></svg>';
     return (
       '<article class="partner">' +
-        '<div class="photo">' + photo + '</div>' +
+        STAR +
         '<span class="role">' + esc(p.role) + '</span>' +
         '<h2>' + esc(p.name) + '</h2>' +
         '<ul>' + p.items.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +

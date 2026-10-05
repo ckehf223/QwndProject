@@ -35,7 +35,7 @@
       return (
         '<a class="post-card" href="post.html?id=' + p.id + '">' +
           A.thumb(p) +
-          '<div class="meta">' + A.badge(p.status) + '<span>' + A.esc(p.category) + '</span><span>' + p.date + '</span></div>' +
+          '<div class="meta"><span>' + A.esc(p.category) + '</span><span>' + p.date + '</span></div>' +
           '<h2>' + A.esc(A.title(p)) + '</h2>' +
           '<p>' + A.esc(p.summary) + '</p>' +
         '</a>'

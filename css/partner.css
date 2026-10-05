@@ -5,22 +5,29 @@
 .partner-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .partner-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,54,84,.15) 0%,rgba(31,54,84,.72) 100%);z-index:-1}
 .partner-hero .wrap{width:100%}
-.partner-hero .eyebrow{color:#CFE3F1}
+.partner-hero .eyebrow{color:var(--mist)}
 .partner-hero h1{color:#fff;font-size:clamp(28px,4vw,42px);margin-bottom:8px}
-.partner-hero p{max-width:32em;color:#E4EEF6}
+.partner-hero p{max-width:32em;color:rgba(255,255,255,.88)}
 
-/* grid */
+@media(max-width:700px){
+  /* 모바일: 문구는 위로, 언덕 위 사람들은 아래에 보이도록 */
+  .partner-hero{height:380px;align-items:flex-start;padding:44px 0 0}
+  .partner-hero img{object-position:100% 50%}
+  .partner-hero::after{background:linear-gradient(180deg,rgba(31,54,84,.72) 0%,rgba(31,54,84,.1) 70%)}
+}
+
+/* grid — 사진 없이 텍스트 카드 */
 .partners{padding:80px 0 110px}
-.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 22px}
-.partner .photo{aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:linear-gradient(160deg,var(--mist),#EAF2F8);display:flex;align-items:center;justify-content:center;position:relative}
-.partner .photo img{width:100%;height:100%;object-fit:cover}
-.partner .initial{font-family:var(--kr-serif);font-size:clamp(28px,3.4vw,40px);font-weight:600;color:var(--navy);opacity:.75}
-.partner .photo svg{position:absolute;right:14px;top:14px;width:16px;height:16px;color:var(--star)}
-.partner .role{display:block;margin-top:16px;font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--star)}
-.partner h2{font-size:19px;margin:2px 0 10px}
-.partner ul{list-style:none;padding:0;font-size:13.5px;line-height:1.65;border-top:1px solid var(--line);padding-top:10px}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.partner{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 22px 24px;transition:border-color .2s,transform .2s}
+.partner:hover{border-color:var(--star);transform:translateY(-2px)}
+.partner>svg{position:absolute;right:20px;top:24px;width:16px;height:16px;color:var(--star)}
+.partner .role{display:inline-block;align-self:flex-start;font-size:12px;font-weight:500;color:var(--navy);background:var(--mist);border-radius:999px;padding:2px 10px}
+.partner h2{font-family:var(--sans);font-size:19px;margin:14px 0 12px}
+.partner ul{list-style:none;padding:12px 0 0;margin:0;font-size:13.5px;line-height:1.65;border-top:1px solid var(--line)}
 .partner li{position:relative;padding-left:12px}
 .partner li+li{margin-top:4px}
 .partner li::before{content:"";position:absolute;left:0;top:.7em;width:4px;height:4px;border-radius:50%;background:var(--star)}
 @media(max-width:960px){.partner-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:700px){.partner-grid{grid-template-columns:repeat(2,1fr);gap:32px 14px}.partner h2{font-size:17px}.partner ul{font-size:13px}}
+@media(max-width:700px){.partner-grid{grid-template-columns:repeat(2,1fr);gap:12px}.partner{padding:22px 16px 20px}.partner h2{font-size:17px}.partner ul{font-size:13px}}
+@media(max-width:400px){.partner-grid{grid-template-columns:1fr}}
