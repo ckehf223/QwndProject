@@ -74,4 +74,35 @@
 .coach p{max-width:34em;margin:0 auto}
 .coach .star{color:var(--mist);margin-bottom:20px}
 
+/* 교육 현황 */
+.edu-head{text-align:center;margin-bottom:48px}
+.edu-head .lead{margin-inline:auto}
+.edu-status{background:var(--surface);border-bottom:1px solid var(--line)}
+.edu-stats{list-style:none;padding:0;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:920px}
+.stat-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:36px 24px 34px}
+.stat-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--surface);border:1px solid var(--line);color:var(--star)}
+.stat-icon svg{width:22px;height:22px}
+.stat-label{font-size:15px;color:var(--ink)}
+.stat-num{display:flex;align-items:baseline;gap:4px;font-family:var(--serif);font-variant-numeric:lining-nums tabular-nums;font-size:clamp(44px,5vw,58px);font-weight:600;line-height:1;color:var(--navy)}
+.stat-num small{font-family:var(--sans);font-size:18px;font-weight:600;color:var(--deep)}
+@media(max-width:760px){.edu-stats{grid-template-columns:1fr}.stat-card{padding:28px 22px}}
+
+/* 교육 후기 */
+.edu-reviews{background:var(--bg)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:32px 28px 26px;transition:border-color .2s,transform .2s}
+.review:hover{border-color:var(--star);transform:translateY(-3px)}
+.review::before{content:"“";position:absolute;right:24px;top:6px;font-family:var(--serif);font-size:88px;line-height:1;color:var(--mist)}
+.review-tag{align-self:flex-start;font-family:var(--serif);font-size:12.5px;font-weight:600;letter-spacing:.18em;color:var(--navy);background:var(--mist);border-radius:999px;padding:3px 12px}
+.review blockquote{flex:1;margin:18px 0 0}
+.review-head{font-family:var(--kr-serif);font-size:19px;font-weight:600;color:var(--navy);line-height:1.55;margin-bottom:14px}
+.review-body{font-size:15px;line-height:1.8}
+.review figcaption{display:flex;align-items:baseline;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:14px}
+.review figcaption strong{color:var(--deep);font-weight:600}
+.review figcaption span{color:var(--muted)}
+@media(max-width:900px){.reviews{grid-template-columns:1fr;max-width:560px;margin-inline:auto}}
+@media(max-width:560px){.edu-head .lead br.pc{display:none}}
+
+.sample-note{margin-top:20px;text-align:center;font-size:13px;color:#C0504D}
+
 @media(prefers-reduced-motion:reduce){.orbit{animation:none}.chart .cbar-fill{width:calc(var(--v) * 1%)}}

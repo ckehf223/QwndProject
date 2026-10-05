@@ -5,6 +5,7 @@ OWND.programs = [
   {
     id: 'insight',
     num: '01',
+    duration: '4일 (4시간)',
     name: 'INSIGHT',
     category: '성향·성격 | 나를 발견하는 코칭',
     question: '나는 어떤 사람일까?',
@@ -35,6 +36,7 @@ OWND.programs = [
   {
     id: 'identity',
     num: '02',
+    duration: '4일 (4시간)',
     name: 'IDENTITY',
     category: '가치·정체성·자기개발',
     question: '나는 어떤 사람으로 살아가고 싶은가?',
@@ -65,6 +67,7 @@ OWND.programs = [
   {
     id: 'relation',
     num: '03',
+    duration: '4일 (4시간)',
     name: 'RELATION',
     category: '관계·커뮤니케이션',
     question: '나는 사람들과 어떻게 관계하고 있을까?',
@@ -95,6 +98,7 @@ OWND.programs = [
   {
     id: 'direction',
     num: '04',
+    duration: '4일 (4시간)',
     name: 'DIRECTION',
     category: '진로·커리어',
     question: '나는 어떤 길을 가야 할까?',

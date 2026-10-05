@@ -52,16 +52,46 @@
       <div class="wrap bar">
         <a href="index.html" class="logo" aria-label="OWND 메인으로">ownd</a>
         <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
-            <a href="index.html" aria-current="page">메인</a>
-            <a href="coaching.html">개인코칭</a>
-            <a href="archive.html">아카이브</a>
-            <a href="partner.html">파트너</a>
+          <a href="index.html" aria-current="page">메인</a>
+          <a href="coaching.html">개인코칭</a>
+          <a href="archive.html">아카이브</a>
+          <a href="partner.html">파트너</a>
         </nav>
         <div class="bar-actions">
           <button class="btn" type="button" data-contact>상담 문의</button>
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
-            <svg class="open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-            <svg class="close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="메뉴 열기"
+          >
+            <svg
+              class="open"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg
+              class="close"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
           </button>
         </div>
       </div>
@@ -231,6 +261,34 @@
         </div>
       </section>
 
+      <section class="edu-status" id="status">
+        <div class="wrap">
+          <div class="edu-head">
+            <span class="eyebrow">Education Status</span>
+            <h2>교육 현황</h2>
+            <p class="lead">
+              한 사람의 질문에서 시작된 대화가 차곡차곡 쌓이고 있습니다.
+            </p>
+          </div>
+          <ul class="edu-stats" id="edu-stats"></ul>
+        </div>
+      </section>
+
+      <section class="edu-reviews" id="reviews">
+        <div class="wrap">
+          <div class="edu-head">
+            <span class="eyebrow">Reviews</span>
+            <h2>함께한 참여자들의 이야기</h2>
+            <p class="lead">
+              누군가에게는 나를 이해하는 시간이, 누군가에게는 새로운 시작이
+              되었습니다. <br class="pc" />OWND와 함께한 참여자들의 솔직한
+              경험과 변화를 담았습니다.
+            </p>
+          </div>
+          <div class="reviews" id="edu-reviews"></div>
+        </div>
+      </section>
+
       <section class="final" id="contact">
         <div class="wrap">
           <h2>나를 발견하는 첫 질문,<br />지금 시작해보세요.</h2>
@@ -243,13 +301,21 @@
     <footer class="site-footer">
       <div class="wrap">
         <div class="top">
-          <div class="brand"><a class="logo" href="index.html" aria-label="OWND 메인으로">ownd</a><span class="slg">나다움을 소유하다.</span></div>
-          <div class="sns"><a href="#">인스타그램</a><a href="#">블로그</a><a href="#">카카오 채널</a></div>
+          <div class="brand">
+            <a class="logo" href="index.html" aria-label="OWND 메인으로">ownd</a
+            ><span class="slg">나다움을 소유하다.</span>
+          </div>
+          <div class="sns">
+            <a href="#">인스타그램</a><a href="#">블로그</a
+            ><a href="#">카카오 채널</a>
+          </div>
         </div>
         <div class="bottom">
           <p class="info">
-            <span>OWND 상담코칭센터</span><span>대표 [입력]</span><span>사업자등록번호 [입력]</span><br>
-            <span>주소 [입력]</span><span>연락처 [입력]</span><span>이메일 [입력]</span>
+            <span>OWND 상담코칭센터</span><span>대표 [입력]</span
+            ><span>사업자등록번호 [입력]</span><br />
+            <span>주소 [입력]</span><span>연락처 [입력]</span
+            ><span>이메일 [입력]</span>
           </p>
           <p class="copy">&copy; 2026 OWND. All rights reserved.</p>
         </div>
@@ -260,6 +326,8 @@
     <script src="js/components/modal.js"></script>
     <script src="js/components/contact-form.js"></script>
     <script src="js/components/site-menu.js"></script>
+    <script src="js/data/edu.js"></script>
     <script src="js/pages/main.js"></script>
+    <script src="js/pages/main-edu.js"></script>
   </body>
 </html>
