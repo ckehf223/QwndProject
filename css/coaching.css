@@ -30,6 +30,8 @@
 
 /* program detail modal (js/components/program-modal.js) */
 .pm-q{font-family:var(--kr-serif);font-size:18px;color:var(--deep);margin-bottom:20px}
+.pm-dur{display:inline-flex;align-items:center;gap:10px;margin:-6px 0 20px;font-size:14.5px;font-weight:500;color:var(--deep);background:var(--tint);border:1px solid var(--line);border-radius:999px;padding:7px 16px}
+.pm-dur span{font-size:12.5px;font-weight:600;color:var(--star)}
 .pm-sessions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .pm-sess{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 22px}
 .pm-sess h3{display:flex;align-items:center;gap:8px;font-size:15px;margin-bottom:10px}

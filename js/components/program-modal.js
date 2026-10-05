@@ -16,6 +16,7 @@
 
   function render(p) {
     var html = '<p class="pm-q">' + esc(p.question) + '</p>';
+    if (p.duration) html += '<p class="pm-dur"><span>교육시간</span>' + esc(p.duration) + '</p>';
     if (p.sessions.length) {
       html += '<div class="pm-sessions">' + p.sessions.map(function (items, i) {
         return '<div class="pm-sess"><h3>' + (i + 1) + '회차</h3>' + list(items) + '</div>';
