@@ -46,9 +46,9 @@
 
   var cards = document.getElementById("qcards");
   if (cards) {
-    cards.innerHTML = QUESTIONS.map(function (s) {
+    cards.innerHTML = QUESTIONS.map(function (s, i) {
       return (
-        '<article class="qcard">' +
+        '<article class="qcard card hover" data-reveal="' + ((i % 4) + 1) + '">' +
         '<span class="emoji" aria-hidden="true">' +
         s.emoji +
         "</span>" +

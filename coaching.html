@@ -38,25 +38,33 @@
 <main>
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">Personal Coaching</span>
-    <h1>개인코칭 프로그램</h1>
-    <p>지금 가장 궁금한 질문에서 시작하세요. 각 프로그램의 ‘자세히 보기’를 누르면 회차별 커리큘럼을 확인할 수 있습니다.</p>
+    <span class="eyebrow" data-reveal>Personal Coaching</span>
+    <h1 data-reveal="1">개인코칭 프로그램</h1>
+    <p data-reveal="2">지금 가장 궁금한 질문에서 시작하세요. 각 프로그램의 ‘자세히 보기’를 누르면 회차별 커리큘럼을 확인할 수 있습니다.</p>
   </div>
 </section>
 
 <section class="programs" id="programs">
   <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Programs</span>
+      <h2>다섯 가지 질문, 다섯 가지 코칭</h2>
+      <p class="lead">성향부터 관계, 진로, 삶의 태도까지. 1:1로 나에게 맞는 속도로 진행합니다.</p>
+    </div>
     <div class="plist" id="program-list"></div>
   </div>
 </section>
 
 <section class="probono" id="probono">
   <div class="wrap">
-    <div>
-      <h2>프로보노 코칭</h2>
-      <p class="lead">경제적·환경적 이유로 자신을 발견할 기회가 부족한 청년에게 전문 코칭을 제공합니다.</p>
+    <div class="probono-panel" data-reveal>
+      <div>
+        <span class="eyebrow">Pro Bono</span>
+        <h2>프로보노 코칭</h2>
+        <p class="lead">경제적·환경적 이유로 자신을 발견할 기회가 부족한 청년에게 전문 코칭을 제공합니다.</p>
+      </div>
+      <button class="btn arrow" type="button" data-contact="probono">프로보노 코칭 신청</button>
     </div>
-    <button class="btn" type="button" data-contact="probono">프로보노 코칭 신청</button>
   </div>
 </section>
 </main>
@@ -84,5 +92,6 @@
 <script src="js/components/program-modal.js"></script>
 <script src="js/components/site-menu.js"></script>
 <script src="js/pages/coaching.js"></script>
+<script src="js/components/reveal.js"></script>
 </body>
 </html>

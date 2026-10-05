@@ -69,74 +69,72 @@
 
     <main>
       <section class="hero">
-        <div class="wrap">
-          <svg
-            class="mark"
-            viewBox="0 0 200 200"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-            aria-hidden="true"
-          >
-            <circle cx="100" cy="100" r="46" />
-            <line x1="100" y1="12" x2="100" y2="188" stroke-width="1" />
-            <g class="orbit">
-              <ellipse
-                cx="100"
-                cy="100"
-                rx="78"
-                ry="26"
-                transform="rotate(-14 100 100)"
-              />
-              <circle
-                cx="170"
-                cy="82"
-                r="3.2"
-                fill="currentColor"
-                stroke="none"
-              />
-            </g>
-            <use
-              class="icon-star"
-              href="#star"
-              x="80"
-              y="80"
-              width="40"
-              height="40"
-            />
-            <use href="#star" x="94" y="6" width="12" height="12" />
-            <use href="#star" x="94" y="182" width="12" height="12" />
-          </svg>
-          <h1 class="word">ownd</h1>
-          <p class="sub">COUNSELING &amp; COACHING CENTER</p>
-          <div class="divider">
-            <svg width="16" height="16" aria-hidden="true">
-              <use href="#star" />
-            </svg>
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow" data-reveal>Counseling &amp; Coaching Center</span>
+            <h1 class="hero-title serif" data-reveal="1">나다움을<br />소유하다.</h1>
+            <p class="hero-msg" data-reveal="2">
+              나를 이해하고, 내 안의 가치와 가능성을 발견하며,<br class="pc" />
+              나다운 삶의 방향을 찾아갑니다.
+            </p>
+            <div class="cta-row" data-reveal="3">
+              <a class="btn arrow" href="coaching.html">프로그램 보기</a>
+              <a class="btn ghost" href="#about">OWND 소개</a>
+            </div>
+            <ul class="hero-facts" data-reveal="4">
+              <li><strong>5</strong><span>개인코칭 프로그램</span></li>
+              <li><strong>1:1</strong><span>맞춤 코칭</span></li>
+              <li><strong>Pro Bono</strong><span>청년 무료 코칭</span></li>
+            </ul>
           </div>
-          <p class="slogan">나다움을 소유하다.</p>
-          <p class="msg">
-            나를 이해하고, 내 안의 가치와 가능성을 발견하며, 나다운 삶의 방향을
-            찾아갑니다.
-          </p>
-          <div class="cta-row">
-            <a class="btn" href="coaching.html">프로그램 보기</a>
+
+          <div class="hero-visual" data-reveal="2" aria-hidden="true">
+            <div class="hv-panel">
+              <svg class="hv-mark" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.1">
+                <circle cx="100" cy="100" r="46" />
+                <line x1="100" y1="10" x2="100" y2="190" stroke-width=".8" />
+                <g class="orbit">
+                  <ellipse cx="100" cy="100" rx="80" ry="26" transform="rotate(-14 100 100)" />
+                  <circle cx="172" cy="82" r="3.4" fill="currentColor" stroke="none" />
+                </g>
+                <use href="#star" x="80" y="80" width="40" height="40" class="hv-star" />
+                <use href="#star" x="94" y="4" width="12" height="12" />
+                <use href="#star" x="94" y="184" width="12" height="12" />
+              </svg>
+              <span class="hv-chip c1"><b>INSIGHT</b>나는 어떤 사람일까?</span>
+              <span class="hv-chip c2"><b>RELATION</b>나는 사람들과 어떻게 관계하고 있을까?</span>
+              <span class="hv-chip c3"><b>DIRECTION</b>나는 어떤 길을 가야 할까?</span>
+            </div>
           </div>
         </div>
       </section>
 
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>INSIGHT</span><i></i><span>IDENTITY</span><i></i><span>RELATION</span><i></i><span>DIRECTION</span><i></i><span>WISDOM</span><i></i><span>PRO BONO</span><i></i>
+          <span>INSIGHT</span><i></i><span>IDENTITY</span><i></i><span>RELATION</span><i></i><span>DIRECTION</span><i></i><span>WISDOM</span><i></i><span>PRO BONO</span><i></i>
+        </div>
+      </div>
+
       <section class="q">
         <div class="wrap">
-          <div class="head">
+          <div class="sec-head" data-reveal>
+            <span class="eyebrow">Questions</span>
             <h2>이런 질문, 한 번쯤 해보셨나요?</h2>
             <p class="lead">지금 청년들이 가장 많이 하고 있는 고민들입니다.</p>
           </div>
           <div class="qcards" id="qcards"></div>
 
-          <figure class="chart" id="concern-chart">
-            <figcaption class="chart-head">
-              <h3>청년들의 고민, 숫자로 보면</h3>
+          <figure class="chart card" id="concern-chart" data-reveal>
+            <figcaption class="chart-aside">
+              <span class="eyebrow">Data</span>
+              <h3>청년들의 고민,<br />숫자로 보면</h3>
               <p>분야별로 고민하고 있다고 응답한 비율</p>
+              <!-- TODO: 통계 출처(조사기관·연도) 입력 -->
+              <p class="chart-note">
+                * 자기이해·정체성은 단일 비율 산출로 제외<br />
+                출처: [조사명 · 기관 · 연도 입력]
+              </p>
             </figcaption>
             <div class="chart-plot">
               <div class="chart-grid" aria-hidden="true">
@@ -148,22 +146,19 @@
               </div>
               <ol class="chart-bars" id="chart-bars"></ol>
             </div>
-            <!-- TODO: 통계 출처(조사기관·연도) 입력 -->
-            <p class="chart-note">
-              * 자기이해·정체성은 단일 비율 산출로 제외<br />
-              출처: [조사명 · 기관 · 연도 입력]
-            </p>
           </figure>
-          <p class="after lead center">
-            타인과 비교하다 보면 내가 가진 것이 별로 없다고 느껴지기도 합니다.
-            하지만 가치는 이미 내 안에 있습니다.
-          </p>
+
+          <div class="q-after" data-reveal>
+            <p>타인과 비교하다 보면 내가 가진 것이 별로 없다고 느껴지기도 합니다.</p>
+            <p class="serif">하지만 가치는 이미 내 안에 있습니다.</p>
+          </div>
         </div>
       </section>
 
-      <section class="intro" id="about">
-        <div class="wrap">
-          <div>
+      <section class="about" id="about">
+        <div class="wrap about-grid">
+          <div data-reveal>
+            <span class="eyebrow">About OWND</span>
             <h2>답을 정해주지 않고,<br />스스로 찾도록 함께합니다.</h2>
             <p class="lead">
               OWND는 정해진 기준에 맞춰 사람을 바꾸기보다, 각자가 가진 고유한
@@ -171,70 +166,78 @@
               돕습니다.
             </p>
           </div>
-          <blockquote>
-            코칭을 통해 자신의 경험을 돌아보고, 성향과 강점, 가치관을 이해하면서
-            이미 내 안에 존재했던 가능성을 발견하게 되었습니다.
-          </blockquote>
+          <figure class="quote-card" data-reveal="2">
+            <svg class="qmark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V20C0 8 6 1 18 0v7c-6 1-9 5-9 12h9v17H0zm30 0V20C30 8 36 1 48 0v7c-6 1-9 5-9 12h9v17H30z" fill="currentColor"/></svg>
+            <blockquote class="serif">
+              코칭을 통해 자신의 경험을 돌아보고, 성향과 강점, 가치관을 이해하면서
+              이미 내 안에 존재했던 가능성을 발견하게 되었습니다.
+            </blockquote>
+          </figure>
         </div>
       </section>
 
       <section class="values" id="values">
         <div class="wrap">
-          <h2>OWND가 믿는 네 가지</h2>
+          <div class="sec-head" data-reveal>
+            <span class="eyebrow">Our Belief</span>
+            <h2>OWND가 믿는 네 가지</h2>
+          </div>
           <div class="vals">
-            <div>
-              <svg width="26" height="26" aria-hidden="true">
-                <use href="#star" />
-              </svg>
+            <article class="val card hover" data-reveal="1">
+              <span class="val-num">01</span>
               <h3>가치 발견</h3>
               <p>모든 사람에게는 발견될 가치가 있습니다.</p>
-            </div>
-            <div>
-              <svg width="26" height="26" aria-hidden="true">
-                <use href="#star" />
-              </svg>
+            </article>
+            <article class="val card hover" data-reveal="2">
+              <span class="val-num">02</span>
               <h3>자기이해</h3>
               <p>나를 이해하는 것이 변화의 시작입니다.</p>
-            </div>
-            <div>
-              <svg width="26" height="26" aria-hidden="true">
-                <use href="#star" />
-              </svg>
+            </article>
+            <article class="val card hover" data-reveal="3">
+              <span class="val-num">03</span>
               <h3>방향</h3>
               <p>나에게 맞는 방향을 함께 찾습니다.</p>
-            </div>
-            <div>
-              <svg width="26" height="26" aria-hidden="true">
-                <use href="#star" />
-              </svg>
+            </article>
+            <article class="val card hover" data-reveal="4">
+              <span class="val-num">04</span>
               <h3>나눔</h3>
               <p>발견되지 않은 가치에도 기회를 제공합니다.</p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="coach" id="coach">
-        <div class="wrap">
-          <svg class="star" width="22" height="22" aria-hidden="true">
-            <use href="#star" />
-          </svg>
-          <h2>
-            젊다는 것은 경험이 적다는 뜻이 아니라, 지금의 고민을 가까이서
-            이해한다는 뜻입니다.
-          </h2>
-          <p>
-            OWND의 코치들은 진로, 관계, 자기이해, 미래에 대한 고민을 가까운
-            거리에서 이해합니다. 정답을 알려주는 사람이 아니라, 질문하고 듣고
-            함께 답을 찾아가는 코치가 되겠습니다.
-          </p>
+        <div class="wrap coach-grid">
+          <div data-reveal>
+            <span class="eyebrow light">Our Coaches</span>
+            <h2>
+              젊다는 것은 경험이 적다는 뜻이 아니라, 지금의 고민을 가까이서
+              이해한다는 뜻입니다.
+            </h2>
+          </div>
+          <div class="coach-body" data-reveal="2">
+            <p>
+              OWND의 코치들은 진로, 관계, 자기이해, 미래에 대한 고민을 가까운
+              거리에서 이해합니다. 정답을 알려주는 사람이 아니라, 질문하고 듣고
+              함께 답을 찾아가는 코치가 되겠습니다.
+            </p>
+            <a class="btn white arrow" href="partner.html">파트너 코치 보기</a>
+          </div>
         </div>
       </section>
 
       <section class="final" id="contact">
         <div class="wrap">
-          <h2>나를 발견하는 첫 질문,<br />지금 시작해보세요.</h2>
-          <button class="btn" type="button" data-contact>상담 문의하기</button>
+          <div class="cta-panel" data-reveal>
+            <div>
+              <h2>나를 발견하는 첫 질문,<br />지금 시작해보세요.</h2>
+              <p>지금의 고민을 편하게 남겨주시면, 나에게 맞는 프로그램과 일정을 안내해드립니다.</p>
+            </div>
+            <div class="actions">
+              <button class="btn white arrow" type="button" data-contact>상담 문의하기</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -261,5 +264,6 @@
     <script src="js/components/contact-form.js"></script>
     <script src="js/components/site-menu.js"></script>
     <script src="js/pages/main.js"></script>
+    <script src="js/components/reveal.js"></script>
   </body>
 </html>
