@@ -18,7 +18,7 @@
 <!-- 공통 헤더: 수정 시 모든 페이지(index, coaching, archive, post, partner)에 동일하게 반영 -->
 <header class="site-header">
   <div class="wrap bar">
-    <a href="index.html" class="logo" aria-label="OWND 메인으로">ownd</a>
+    <a href="index.html" class="logo" aria-label="OWND 메인으로"><img class="logo-mark" src="images/logo-mark.svg" alt="" width="44" height="46" /><img class="logo-word" src="images/logo-word.svg" alt="ownd" width="105" height="30" /></a>
     <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
         <a href="index.html">메인</a>
         <a href="coaching.html">개인코칭</a>
@@ -40,7 +40,7 @@
   <!-- TODO: 상단 이미지 교체 (임시 일러스트: images/partner-hero.svg) -->
   <img src="images/partner-hero.svg" alt="" width="1920" height="800">
   <div class="wrap">
-    <span class="eyebrow">Partners</span>
+    <span class="eyebrow light">Partners</span>
     <h1>함께하는 코치들</h1>
     <p>질문하고, 듣고, 함께 답을 찾아가는 OWND의 파트너를 소개합니다.</p>
   </div>
@@ -48,6 +48,11 @@
 
 <section class="partners">
   <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Partner Coaches</span>
+      <h2>OWND와 함께하는 파트너 코치</h2>
+      <p class="lead">각자의 전문 분야에서 경험을 쌓은 코치들이 1:1로 함께합니다.</p>
+    </div>
     <div class="partner-grid" id="partner-grid"></div>
   </div>
 </section>
@@ -57,7 +62,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="top">
-      <div class="brand"><a class="logo" href="index.html" aria-label="OWND 메인으로">ownd</a><span class="slg">나다움을 소유하다.</span></div>
+      <div class="brand"><a class="logo" href="index.html" aria-label="OWND 메인으로"><img class="logo-mark" src="images/logo-mark.svg" alt="" width="44" height="46" /><img class="logo-word" src="images/logo-word.svg" alt="ownd" width="105" height="30" /></a><span class="slg">나다움을 소유하다.</span></div>
       <div class="sns"><a href="#">인스타그램</a><a href="#">블로그</a><a href="#">카카오 채널</a></div>
     </div>
     <div class="bottom">
@@ -76,5 +81,6 @@
 <script src="js/components/site-menu.js"></script>
 <script src="js/data/partners.js"></script>
 <script src="js/pages/partner.js"></script>
+<script src="js/components/reveal.js"></script>
 </body>
 </html>

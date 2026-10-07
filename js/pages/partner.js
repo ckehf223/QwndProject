@@ -11,9 +11,9 @@
 
   var STAR = '<svg viewBox="-12 -12 24 24" aria-hidden="true"><path d="M0-11Q1.6-1.6 11 0Q1.6 1.6 0 11Q-1.6 1.6-11 0Q-1.6-1.6 0-11Z" fill="currentColor"/></svg>';
 
-  root.innerHTML = OWND.partners.map(function (p) {
+  root.innerHTML = OWND.partners.map(function (p, i) {
     return (
-      '<article class="partner">' +
+      '<article class="partner card hover" data-reveal="' + ((i % 4) + 1) + '">' +
         STAR +
         '<span class="role">' + esc(p.role) + '</span>' +
         '<h2>' + esc(p.name) + '</h2>' +
