@@ -6,15 +6,13 @@
 .hero::before{width:380px;height:380px;right:-130px;top:-120px}
 .hero::after{width:320px;height:320px;left:-140px;bottom:-130px}
 .hero .wrap{position:relative;z-index:1}
-.mark{width:150px;height:150px;margin:0 auto 6px;display:block;color:var(--navy)}
-.orbit{transform-origin:100px 100px;animation:spin 60s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.word{font-family:var(--serif);font-size:clamp(76px,13vw,128px);font-weight:600;color:var(--navy);line-height:1;letter-spacing:-.01em}
-.sub{margin-top:14px;font-size:13px;letter-spacing:.34em;color:var(--navy);font-weight:400}
-.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:34px auto;color:var(--star);max-width:420px}
-.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
-.slogan{font-family:var(--kr-serif);font-size:clamp(20px,3vw,26px);letter-spacing:.25em;color:var(--deep);font-weight:400}
-.hero p.msg{margin:22px auto 38px;max-width:30em}
+.hero-logo{margin:0 auto}
+.hero-logo .logo-full{display:block;width:min(100%,640px);height:auto;margin:0 auto;color:#3F5F77;overflow:visible}
+/* 글자 묶음(구분선 별 x=1393)을 페이지 중앙축에 맞추고 심볼은 왼쪽으로: (1393-1055)/2030 ≈ 16.6% */
+@media(min-width:880px){.hero-logo .logo-full{transform:translateX(-16.6%)}}
+.logo-full .logo-sub{font-family:var(--sans);font-size:45.5px;font-weight:350}
+.logo-full .logo-slogan{font-family:var(--kr-serif);font-size:66px;font-weight:400}
+.hero p.msg{margin:34px auto 38px;max-width:30em}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* questions (텍스트 카드) */
@@ -105,4 +103,4 @@
 
 .sample-note{margin-top:20px;text-align:center;font-size:13px;color:#C0504D}
 
-@media(prefers-reduced-motion:reduce){.orbit{animation:none}.chart .cbar-fill{width:calc(var(--v) * 1%)}}
+@media(prefers-reduced-motion:reduce){.chart .cbar-fill{width:calc(var(--v) * 1%)}}
