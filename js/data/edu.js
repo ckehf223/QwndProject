@@ -8,9 +8,9 @@ OWND.edu = {
 
   // 교육 현황 — value는 숫자만, unit은 단위
   stats: [
-    { label: '누적 코칭 진행 수', value: 320, unit: '회' },
-    { label: '누적 참여자 수', value: 180, unit: '명' },
-    { label: '세미나 · 워크숍 진행', value: 24, unit: '회' }
+    { label: '누적 코칭 진행 수', value: 312, unit: '회' },
+    { label: '누적 참여자 수', value: 185, unit: '명' },
+    { label: '세미나 · 워크숍 진행', value: 19, unit: '회' }
   ],
 
   // 교육 후기 — name은 이름 일부를 * 로 가려서 입력

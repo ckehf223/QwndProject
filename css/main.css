@@ -46,16 +46,11 @@
   .hv-chip{font-size:13px;padding:10px 14px}
 }
 
-/* keyword band */
-.marquee{overflow:hidden;background:var(--surface);border-block:1px solid var(--line);padding:22px 0}
-.marquee-track{display:flex;align-items:center;width:max-content;animation:marquee 42s linear infinite}
-.marquee span,.marquee i{margin-right:40px}
-.marquee span{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:.14em;color:var(--navy)}
-.marquee i{flex:none;width:14px;height:14px;background:var(--star);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%)}
-@keyframes marquee{to{transform:translateX(-50%)}}
-
 /* questions */
 .q{background:var(--bg)}
+/* 히어로 배경이 --bg로 이어지므로, 바로 뒤 섹션의 위 여백을 줄여 간격을 맞춤 */
+.hero + .q{padding-top:24px}
+@media(max-width:760px){.hero + .q{padding-top:8px}}
 .qcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .qcard{display:flex;flex-direction:column;gap:18px;padding:26px 24px 28px}
 .qcard .emoji{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:var(--tint);font-size:23px;line-height:1}
@@ -160,4 +155,4 @@
 .final{padding-top:120px}
 @media(max-width:760px){.final{padding-top:84px}}
 
-@media(prefers-reduced-motion:reduce){.orbit,.hv-chip,.marquee-track{animation:none}.chart .cbar-fill{width:calc(var(--v) * 1%)}}
+@media(prefers-reduced-motion:reduce){.orbit,.hv-chip{animation:none}.chart .cbar-fill{width:calc(var(--v) * 1%)}}

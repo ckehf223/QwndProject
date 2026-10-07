@@ -66,7 +66,11 @@ h3{font-weight:600;letter-spacing:-.015em}
 /* header (마크업: 각 HTML / 메뉴 동작: js/components/site-menu.js) */
 .site-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 78%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent);padding-top:env(safe-area-inset-top,0px)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--header-h)}
-.logo{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--navy);letter-spacing:.01em;line-height:1}
+.logo{display:inline-flex;align-items:center;gap:8px;flex:none;line-height:1}
+/* 원본 로고: 문양(logo-mark.svg) + 글자(logo-word.svg), 세로 가운데 정렬 */
+.logo img{display:block;width:auto}
+.logo-mark{height:46px}
+.logo-word{height:30px}
 .site-nav{display:flex;gap:6px;font-size:15px;font-weight:500}
 .site-nav a{position:relative;padding:8px 16px;border-radius:999px;color:var(--ink);transition:background .2s,color .2s}
 .site-nav a:hover{color:var(--deep);background:var(--tint)}
@@ -80,6 +84,8 @@ h3{font-weight:600;letter-spacing:-.015em}
 .menu-toggle[aria-expanded="true"] .close{display:block}
 @media(max-width:860px){
   :root{--header-h:66px}
+  .logo-mark{height:40px}
+  .logo-word{height:26px}
   .menu-toggle{display:inline-flex}
   .site-nav{display:none;position:absolute;left:12px;right:12px;top:calc(100% + 8px);flex-direction:column;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:8px;box-shadow:var(--shadow-lg)}
   .site-nav.open{display:flex}
@@ -90,8 +96,9 @@ h3{font-weight:600;letter-spacing:-.015em}
 /* footer (마크업: 각 HTML) — 헤더와 같은 배경·글자색 */
 .site-footer{background:var(--surface);color:var(--ink);border-top:1px solid var(--line);padding:32px 0 calc(26px + env(safe-area-inset-bottom,0px));font-size:13px}
 .site-footer .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.site-footer .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.site-footer .logo{font-size:26px}
+.site-footer .brand{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.site-footer .logo-mark{height:40px}
+.site-footer .logo-word{height:26px}
 .site-footer .slg{font-family:var(--kr-serif);letter-spacing:.2em;color:var(--deep);font-size:13px}
 .site-footer .sns{display:flex;flex-wrap:wrap;gap:8px}
 .site-footer .sns a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s,color .2s}
