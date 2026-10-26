@@ -7,7 +7,15 @@
   var idx = -1;
   for (var i = 0; i < posts.length; i++) if (posts[i].id === id) { idx = i; break; }
 
+  // SEO: head의 meta/link 값을 게시글 기준으로 갱신 (없으면 생성)
+  function setHead(tag, key, val, attr, content) {
+    var el = document.head.querySelector(tag + '[' + key + '="' + val + '"]');
+    if (!el) { el = document.createElement(tag); el.setAttribute(key, val); document.head.appendChild(el); }
+    el.setAttribute(attr, content);
+  }
+
   if (idx < 0) {
+    setHead('meta', 'name', 'robots', 'content', 'noindex, follow');
     root.innerHTML =
       '<div class="post-head"><h1>게시글을 찾을 수 없습니다</h1><p>삭제되었거나 주소가 잘못되었습니다.</p></div>' +
       '<div class="post-foot"><div class="back"><a class="btn ghost" href="archive.html">목록으로</a></div></div>';
@@ -16,6 +24,28 @@
 
   var p = posts[idx];
   document.title = p.title + ' | OWND 아카이브';
+
+  var url = 'https://owndit.netlify.app/post.html?id=' + p.id;
+  setHead('link', 'rel', 'canonical', 'href', url);
+  setHead('meta', 'name', 'description', 'content', p.summary);
+  setHead('meta', 'property', 'og:type', 'content', 'article');
+  setHead('meta', 'property', 'og:url', 'content', url);
+  setHead('meta', 'property', 'og:title', 'content', document.title);
+  setHead('meta', 'property', 'og:description', 'content', p.summary);
+  var ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: p.title,
+    description: p.summary,
+    datePublished: p.date.replace(/\./g, '-'),
+    url: url,
+    image: 'https://owndit.netlify.app/images/og-image.png',
+    author: { '@type': 'Organization', name: 'OWND 상담코칭센터' },
+    publisher: { '@type': 'Organization', name: 'OWND 상담코칭센터' }
+  });
+  document.head.appendChild(ld);
 
   function block(b) {
     if (b.p) return '<p>' + A.esc(b.p) + '</p>';
