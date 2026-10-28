@@ -25,7 +25,7 @@
   var p = posts[idx];
   document.title = p.title + ' | OWND 아카이브';
 
-  var url = 'https://owndit.netlify.app/post.html?id=' + p.id;
+  var url = 'https://ownd.co.kr/post.html?id=' + p.id;
   setHead('link', 'rel', 'canonical', 'href', url);
   setHead('meta', 'name', 'description', 'content', p.summary);
   setHead('meta', 'property', 'og:type', 'content', 'article');
@@ -41,7 +41,7 @@
     description: p.summary,
     datePublished: p.date.replace(/\./g, '-'),
     url: url,
-    image: 'https://owndit.netlify.app/images/og-image.png',
+    image: 'https://ownd.co.kr/images/og-image.png',
     author: { '@type': 'Organization', name: 'OWND 상담코칭센터' },
     publisher: { '@type': 'Organization', name: 'OWND 상담코칭센터' }
   });

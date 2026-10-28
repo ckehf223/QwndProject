@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://owndit.netlify.app/sitemap.xml
+Sitemap: https://ownd.co.kr/sitemap.xml
